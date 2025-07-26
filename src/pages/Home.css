@@ -1,0 +1,77 @@
+.home-container {
+  max-width: 900px !important;
+  margin: 2rem auto !important;
+  padding: 0 1rem !important;
+  color: white !important;
+  font-family: 'Georgia', serif !important;
+  line-height: 1.6 !important;
+}
+
+.home-container h1 {
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+}
+
+.home-container h2 {
+  font-size: 1rem !important;
+  color: white !important;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid white !important;
+  padding-bottom: 0.4rem !important;
+}
+
+.home-container .post-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.home-container .post-item {
+  background-color: #1c1c1c !important;
+  padding: 1rem !important;
+  border-radius: 10px !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3) !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+.home-container .post-item:hover {
+  box-shadow: 0 0 15px #3ea6ff !important;
+}
+
+.home-container .post-title {
+  font-size: 1.4rem !important;
+  color: white !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.home-container .post-link {
+  text-decoration: none !important;
+}
+
+.home-container .post-meta {
+  font-size: 0.9rem !important;
+  color: #bbb !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.home-container .post-preview {
+  font-size: 0.95rem !important;
+  color: #ddd !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.home-container .read-more {
+  font-size: 0.9rem !important;
+  color: #6cf !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.home-container .read-more:hover {
+  text-decoration: underline !important;
+}

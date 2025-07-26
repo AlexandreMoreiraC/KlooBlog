@@ -1,0 +1,58 @@
+.post-container {
+  padding: 2.5rem 3rem;
+  background-color: #121212;
+  color: #eee;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+}
+
+.post-title {
+  font-size: 2.35rem;
+  font-weight: 700;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.8rem;
+  color: #eee;
+  text-shadow: none;
+}
+
+
+.post-text {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #ddd;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.post-note {
+  font-size: 1rem;
+  font-style: italic;
+  color: #888;
+  margin-top: 2rem;
+  align-self: flex-end;
+}
+.post-text p {
+  margin-bottom: 1rem !important;
+}
+
+ .post-author {
+  font-size: 0.9rem;
+  color: #6cf;
+  text-decoration: none;
+  font-weight: bold;
+}
+.post-image {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: block;
+}
