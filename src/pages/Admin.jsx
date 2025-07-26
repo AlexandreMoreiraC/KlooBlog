@@ -23,17 +23,11 @@ export default function Admin() {
     id: "",
     title: "",
     author: "",
-    content: [
-      { type: "paragraph", text: "" }
-    ],
+    content: [{ type: "paragraph", text: "" }],
   })
 
   function criarSlug(texto) {
-    return texto
-      .toLowerCase()
-      .trim()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "")
+    return texto.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^\w-]+/g, "")
   }
 
   async function login(email, password) {
@@ -52,12 +46,7 @@ export default function Admin() {
   async function logout() {
     await signOut(auth)
     setUser(null)
-    setForm({
-      id: "",
-      title: "",
-      author: "",
-      content: [{ type: "paragraph", text: "" }],
-    })
+    setForm({ id: "", title: "", author: "", content: [{ type: "paragraph", text: "" }] })
     setPosts([])
   }
 
@@ -93,29 +82,14 @@ export default function Admin() {
     setLoading(true)
     try {
       const idPersonalizado = form.id || criarSlug(form.title)
-
       if (form.id) {
         const postRef = doc(db, "posts", form.id)
-        await updateDoc(postRef, {
-          title: form.title,
-          author: form.author,
-          content: form.content,
-        })
+        await updateDoc(postRef, { title: form.title, author: form.author, content: form.content })
       } else {
         const postRef = doc(db, "posts", idPersonalizado)
-        await setDoc(postRef, {
-          title: form.title,
-          author: form.author,
-          content: form.content,
-          criadoEm: new Date(),
-        })
+        await setDoc(postRef, { title: form.title, author: form.author, content: form.content, criadoEm: new Date() })
       }
-      setForm({
-        id: "",
-        title: "",
-        author: "",
-        content: [{ type: "paragraph", text: "" }],
-      })
+      setForm({ id: "", title: "", author: "", content: [{ type: "paragraph", text: "" }] })
       await fetchPosts()
       setError("")
     } catch (err) {

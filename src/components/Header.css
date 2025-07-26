@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -18,12 +19,17 @@
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
+  flex: 1 1 auto;
 }
 
 nav {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex: 2 1 auto;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .nav-link {
@@ -32,6 +38,7 @@ nav {
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -47,4 +54,27 @@ nav {
   color: #fff;
   font-weight: 600;
   margin-left: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .container {
+    justify-content: center;
+  }
+
+  .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-user {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
 }

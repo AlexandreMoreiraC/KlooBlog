@@ -56,3 +56,29 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   display: block;
 }
+@media (max-width: 600px) {
+  .post-container {
+    padding: 1.5rem 1rem;
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+  
+  .post-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .post-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .post-author {
+    font-size: 0.8rem;
+  }
+  
+  .post-note {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+}

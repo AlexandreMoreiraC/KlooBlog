@@ -75,3 +75,28 @@
 .home-container .read-more:hover {
   text-decoration: underline !important;
 }
+@media (max-width: 600px) {
+  .home-container {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 0 0.5rem !important;
+  }
+  .home-container h1 {
+    font-size: 1.8rem !important;
+  }
+  .home-container h2 {
+    font-size: 0.9rem !important;
+  }
+  .home-container .post-title {
+    font-size: 1.1rem !important;
+  }
+  .home-container .post-meta,
+  .home-container .post-preview,
+  .home-container .read-more {
+    font-size: 0.85rem !important;
+  }
+  .home-container .post-item {
+    padding: 0.75rem !important;
+  }
+}
+

@@ -125,3 +125,15 @@ li button:hover {
     margin-top: 0.5rem;
   }
 }
+@media (max-width: 600px) {
+  main {
+    max-width: 95%;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}

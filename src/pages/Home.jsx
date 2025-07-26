@@ -35,7 +35,12 @@ export default function Home() {
               </Link>
               <p className="post-meta">por <strong>{post.author}</strong></p>
               <p className="post-preview">
-                {post.content?.slice(0, 150)}...
+                {(Array.isArray(post.content) ? post.content : [])
+                  .filter(block => block.type === "paragraph")
+                  .map(block => block.text)
+                  .join(" ")
+                  .slice(0, 150) + ((Array.isArray(post.content) && post.content.length > 0) ? "..." : "")
+                }
               </p>
               <Link to={`/post/${post.id}`} className="read-more">Ler crônica completa →</Link>
             </li>
